@@ -46,9 +46,9 @@ fi
 while IFS= read -r line || [ -n "$line" ]; do
     l_TELNET=`echo "quit" | telnet $line 2>&1 | grep "Escape character is"` 
     if [ "$?" -ne 0 ]; then
-        echo -e "${RED}[FAILED]${NC} Connection to: ${line}"
+        echo -e "${RED}[FAILURE]${NC} Connection to: ${line}"
     else
-        echo -e "${GREEN}[SUCESS]${NC} Connection to: ${line}"
+        echo -e "${GREEN}[SUCCESS]${NC} Connection to: ${line}"
     fi
 done <  "$FILE"
 
