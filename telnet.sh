@@ -48,7 +48,7 @@ while IFS= read -r line || [ -n "$line" ]; do
     if [ "$?" -ne 0 ]; then
         echo -e "${RED}[FAILED]${NC} Connection to: ${line}"
     else
-        echo -e "${GREEN}[SUCESS]${NC} Connection to ${line}"
+        echo -e "${GREEN}[SUCESS]${NC} Connection to: ${line}"
     fi
 done <  "$FILE"
 
